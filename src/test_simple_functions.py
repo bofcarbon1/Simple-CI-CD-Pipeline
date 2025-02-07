@@ -1,5 +1,5 @@
 import pytest
-from ....src.simple_functions import (add)
+from .simple_functions import (add)
 # from src.simple_functions import (add)
 
 
