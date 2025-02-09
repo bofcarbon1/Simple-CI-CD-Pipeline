@@ -41,8 +41,8 @@ jobs:
         run: |
           curl https://cli-assets.heroku.com/install.sh | sh         
 
-      - name: Login to Heroku Container Registry
-        run: heroku container:login
+      # - name: Login to Heroku Container Registry
+      #  run: heroku container:login
 
       - name: Build & Push Docker Image
         run: |
