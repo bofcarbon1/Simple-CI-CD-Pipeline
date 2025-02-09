@@ -37,6 +37,10 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
+      - name: Install Heroku CLI
+        run: |
+          curl https://cli-assets.heroku.com/install.sh | sh         
+
       - name: Login to Heroku Container Registry
         run: heroku container:login
 
