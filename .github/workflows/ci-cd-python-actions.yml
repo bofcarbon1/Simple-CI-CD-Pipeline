@@ -50,5 +50,5 @@ jobs:
 
       - name: Build & Push Docker Image
         run: |
-          heroku container:push web -a my-heroku-app
-          heroku container:release web -a my-heroku-app
+          heroku container:push web -a nomadic-brian-lab
+          heroku container:release web -a nomadic-brian-lab
