@@ -37,4 +37,18 @@ jobs:
     #    flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
     - name: Test with pytest
       run: |
-        pytest src/test_simple_functions.py -v  
+     #  export PYTHONPATH=src
+        pytest src/test_simple_functions.py -v
+
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Login to Heroku Container Registry
+        run: heroku container:login
+
+      - name: Build & Push Docker Image
+        run: |
+          heroku container:push web -a my-heroku-app
+          heroku container:release web -a my-heroku-app
