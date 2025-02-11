@@ -1,1 +1,1 @@
-python-worker: python
+python-worker: python pythonCodeForCICD/test_integration.py
