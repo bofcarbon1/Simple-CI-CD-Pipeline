@@ -48,3 +48,7 @@ jobs:
         run: |
           heroku container:push web -a nomadic-brian-lab
           heroku container:release web -a nomadic-brian-lab
+
+      - name: Test on heroku with pytest
+        run: |
+          pytest src/test_integration.py -v
